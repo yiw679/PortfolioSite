@@ -10,6 +10,8 @@ import { nanoid } from 'nanoid'
 import { useSpring, animated, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer';
 
+const getUrl = (path) => `${process.env.PUBLIC_URL}/assets${path}`
+
 function App() {
 
   const planet = useRef()
@@ -37,7 +39,7 @@ function App() {
   }
 
   function MeBox() {
-    const meTexture = useLoader(THREE.TextureLoader, "/Me.jpg")
+    const meTexture = useLoader(THREE.TextureLoader, getUrl("/Me.jpg"))
 
     return (
       <mesh
@@ -88,7 +90,7 @@ function App() {
       }
     })
 
-    const bg = useLoader(THREE.TextureLoader, "/SimpleSky.png")
+    const bg = useLoader(THREE.TextureLoader, getUrl("/SimpleSky.png"))
 
     useEffect(() => {
       scene.background = bg
@@ -139,9 +141,9 @@ function App() {
           <Suspense fallback={null}>
             <Environment></Environment>
             {Array(400).fill().map(() => addStar())}
-            <Model iref={planet} path="/Models/Island1.fbx" scale={0.01} position={[0,0,0]}></Model>
-            <Model iref={planet1} path="/Models/ShepherdPlanet.fbx" scale={0.01} position={[20,40,40]}></Model>
-            <Model iref={donut} path="/Models/donutblend.fbx" scale={6} position={[-50,50,70]}></Model>
+            <Model iref={planet} path={getUrl("/Models/Island1.fbx")} scale={0.01} position={[0,0,0]}></Model>
+            <Model iref={planet1} path={getUrl("/Models/ShepherdPlanet.fbx")} scale={0.01} position={[20,40,40]}></Model>
+            <Model iref={donut} path={getUrl("/Models/donutblend.fbx")} scale={6} position={[-50,50,70]}></Model>
             <MeBox></MeBox>
           </Suspense>
         </Canvas>
@@ -176,16 +178,16 @@ function App() {
               <div id="cdSlides" className="carousel slide demoSlidesContainer" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="/CyberDetective/capture1.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/CyberDetective/capture1.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/CyberDetective/capture2.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/CyberDetective/capture2.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/CyberDetective/capture3.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/CyberDetective/capture3.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/CyberDetective/capture4.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/CyberDetective/capture4.png")} className="d-block w-100" alt="..."/>
                   </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#cdSlides" data-bs-slide="prev">
@@ -210,16 +212,16 @@ function App() {
               <div id="spurpunkSlides" className="carousel slide demoSlidesContainer" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="/Spurpunk/capture1.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/Spurpunk/capture1.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/Spurpunk/capture2.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/Spurpunk/capture2.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/Spurpunk/capture3.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/Spurpunk/capture3.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/Spurpunk/capture4.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/Spurpunk/capture4.png")} className="d-block w-100" alt="..."/>
                   </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#spurpunkSlides" data-bs-slide="prev">
@@ -259,16 +261,16 @@ function App() {
               <div id="tmSlides" className="carousel slide demoSlidesContainer" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="/TaichiMaster/capture1.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/TaichiMaster/capture1.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/TaichiMaster/capture2.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/TaichiMaster/capture2.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/TaichiMaster/capture3.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/TaichiMaster/capture3.png")} className="d-block w-100" alt="..."/>
                   </div>
                   <div className="carousel-item">
-                    <img src="/TaichiMaster/capture4.png" className="d-block w-100" alt="..."/>
+                    <img src={getUrl("/TaichiMaster/capture4.png")} className="d-block w-100" alt="..."/>
                   </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#tmSlides" data-bs-slide="prev">
