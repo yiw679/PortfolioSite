@@ -158,12 +158,12 @@ function App() {
 
       <main>
         <blockquote>
-          <span>"I play games, I make games.......And websites"</span>
+          <span>"I PLAY GAMES, I MAKE GAMES ... And WEBSITES!"</span>
         </blockquote>
 
         <SpringInView side='left'>
           <h2>Cyber Detective</h2>
-          <h4>Self Game Dev Project</h4>
+          <h4>Clue & Storytelling Game (Role: Sole Developer)</h4>
           <div className="projectWrapper">
             <div className="introContainer">
 
@@ -246,7 +246,7 @@ function App() {
 
         <SpringInView side='left'>
           <h2>Tai-Chi Master</h2>
-          <h4>School Project (Role: Developer)</h4>
+          <h4>Fast-paced level crushing game (Role: Developer)</h4>
           <div className="projectWrapper">
             <div className="introContainer">
 
@@ -285,7 +285,95 @@ function App() {
             </div>
           </div>
         </SpringInView>
+
+        <SpringInView side='right'>
+          <h2>Lost In Space</h2>
+          <h4>2D 8bit retro survival (Role: Sole Developer)</h4>
+          <div className="projectWrapper">
+            <div className="introContainer">
+
+              <h3>Intro</h3>
+              <p>You are a space traveling business man. But something's not right today.
+                You crashed right inside a big mining crate on this unknown planet, only
+                abandoned bases and mines are to be found. Find out what happened, and more
+                importantly, find out how to leave!
+              </p>
+
+              <p>This project started only weeks before, ask me if you want to see a 
+                slice of it!</p>
+            </div>
+            <div className="demoContainer">
+              <div id="lisSlides" className="carousel slide demoSlidesContainer" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                  <img src={getUrl("/LostInSpace/1.png")} className="d-block w-100" alt="..."/>
+                  </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#lisSlides" data-bs-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#lisSlides" data-bs-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </SpringInView>
+
+        <SpringInView side='left'>
+          <h2>NeverEnding</h2>
+          <h4>Interactive Social Platform (Role: Front-End Dev)</h4>
+          <div className="projectWrapper">
+            <div className="introContainer">
+
+              <h3>Intro</h3>
+              <p>
+              NeverEnding is more than a suite of simple, intuitive tools 
+              that will help you be seen in your games and stories. 
+              NeverEnding is also a place to stay, share, and browse other 
+              members’ awesome creations. In the network, you’ll find new 
+              friends who enjoy awesome stories and games just as much as you do.
+              </p>
+            </div>
+            <div className="demoContainer">
+            <h3>Link (<a href="https://beneverending.com/" target="_blank" rel="noopener noreferrer">Website</a>)</h3>
+            <h3>Link (<a href="https://www.beneverending.app/" target="_blank" rel="noopener noreferrer">Character Builder</a>)</h3>
+            <h3>Demo (<a href="https://scene-builder.d1xvp9p4bs3cur.amplifyapp.com/" target="_blank" rel="noopener noreferrer">Scene Creator</a>)</h3>
+              <div id="neSlides" className="carousel slide demoSlidesContainer" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img src={getUrl("/NeverEnding/cb.png")} className="d-block w-100" alt="..."/>
+                  </div>
+                  <div className="carousel-item">
+                    <img src={getUrl("/NeverEnding/sb.png")} className="d-block w-100" alt="..."/>
+                  </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#neSlides" data-bs-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#neSlides" data-bs-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </SpringInView>
+
+        <SpringInView side='full'>
+          <div className="footer">
+            <h1>Contact</h1>
+            <h2> Email: zdwym1997@gmail.com</h2>
+            <div class="badge-base LI-profile-badge" data-locale="zh_CN" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="yiming-wang-0999b2187" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/yiming-wang-0999b2187?trk=profile-badge">Yiming Wang</a></div>
+              
+          </div>
+        </SpringInView>
       </main>
+
+
     </div>
   );
 }

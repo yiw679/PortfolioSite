@@ -56,7 +56,7 @@ main {
   color: white;
   z-index: 99;
   width: 100%;
-  padding: 120px 0px;
+  padding: 120px 0px 0px 0px;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -71,8 +71,16 @@ blockquote {
   font-style: normal;
 }
 
+p {
+  font-size: 1.3em;
+}
+
 .leftSection {
   grid-column: 2 / 10;
+}
+
+.fullSection {
+  grid-column: 1 / 13;
 }
 
 .rightSection {
@@ -178,4 +186,15 @@ body::-webkit-scrollbar-track-piece:end {
 body::-webkit-scrollbar-track-piece:start {
   background: transparent;
   margin-top: 10%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer > * {
+  margin-bottom: 1em;
 }
